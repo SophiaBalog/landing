@@ -14,8 +14,7 @@ export function hero({anchor,badge,title,subtitle,image:{src, alt},buttons}){
             `).join("")}
         </div>
       </div>
-      <img class ="hero__image" src="${src}" alt = ""
-      ${alt}
+      <img class ="hero__image" src="${src}" alt = "${alt}">
     </section>
     `;
 }

@@ -1,6 +1,6 @@
 import './styles/base.css'
 import {getSettings, getPages} from "./api";
-import {hero} from "./blocks/hero/hero"
+import { renderBlocks } from './render';
 
 const app = document.querySelector('#app');
 
@@ -8,15 +8,13 @@ const app = document.querySelector('#app');
 
 async function start(){
   try {
-      // const settings = await getSettings();
     const [settings, page] = await Promise.all([
       getSettings(),
       getPages(location.pathname)
     ])
 
     document.title = ` ${page.title} - ${settings.siteName}`;
-    const heroBlock = page.blocks.find((block)=> block.type ==='hero');
-    app.innerHTML = hero(heroBlock);
+    app.innerHTML = `<main>${renderBlocks(page.blocks)}</main>`;
 
 
   } catch (error) {
