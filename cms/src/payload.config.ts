@@ -22,7 +22,9 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  endpoints:[commonEndpoint,pageEndpoint]
+  cors:[process.env.FRONTEND_URL || ""],
+  serverURL: process.env.CMS_URL || '',
+  endpoints:[commonEndpoint,pageEndpoint],
   globals: [Common],
   collections: [Users, Media, Pages],
   editor: lexicalEditor(),

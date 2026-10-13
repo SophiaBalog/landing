@@ -194,7 +194,7 @@ export interface Page {
               | null;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'Hero';
+            blockType: 'hero';
           }
         | {
             anchor: string;
@@ -343,7 +343,7 @@ export interface PagesSelect<T extends boolean = true> {
   blocks?:
     | T
     | {
-        Hero?:
+        hero?:
           | T
           | {
               anchor?: T;
@@ -435,7 +435,7 @@ export interface Common {
     id?: string | null;
   }[];
   footer: {
-    copyright: string;
+    text: string;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -456,7 +456,7 @@ export interface CommonSelect<T extends boolean = true> {
   footer?:
     | T
     | {
-        copyright?: T;
+        text?: T;
       };
   updatedAt?: T;
   createdAt?: T;

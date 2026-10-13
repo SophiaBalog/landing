@@ -13,7 +13,7 @@ export const Common: GlobalConfig = {
             {name: 'link', type: 'text', label: 'URL пункту меню', required: true},
         ]},
         {name: 'footer', type: 'group', label: 'Футер сайту', fields:[
-            {name: 'copyright', type: 'text', label: 'Текст копірайту', required: true},
+            {name: 'text', type: 'text', label: 'Текст копірайту', required: true},
         ]}
     ]
 }
